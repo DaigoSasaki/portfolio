@@ -1,0 +1,541 @@
+@charset "utf-8";
+html{
+    font-size:100%;
+    scroll-behavior: smooth;
+    scroll-padding-top:100px;
+}
+body{
+    color:#000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:400;
+}
+img{
+    max-width:100%;
+    vertical-align: bottom;
+}
+li{
+    list-style: none;
+}
+a{
+    color:#fff;
+    text-decoration: none;
+}
+a:hover{
+    opacity: 0.7;
+}
+.sp{
+    display: none;
+}
+.wrapper{
+    padding:60px 200px;
+}
+
+/*--ヘッダー--*/
+#header{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position:fixed;
+    background-color:#965700;
+    padding:10px 100px;
+    z-index:100;
+}
+#header .logo{
+    width:100%;
+    max-width:400px;
+}
+#header .logo a{
+    display:block;
+}
+#header .navi .menu{
+    display:flex;
+}
+#header .navi .menu li{
+    font-size:24px;
+    margin-left:50px;
+}
+
+/*--メインビジュアル--*/
+.mainvisual img{
+    width:100%;
+    height:960px;
+    object-fit: cover;
+    object-position: center;
+}
+.mainvisual .text-area{
+    position:absolute;
+    top:450px;
+    left:50vw;
+    transform: translateX(-50%);
+    text-align: center;
+    width:90%;
+}
+.mainvisual .text-area .name{
+    font-size: 96px;
+    color:#fff;
+    margin-bottom:35px;
+}
+.mainvisual .text-area .catchphrase{
+    font-size: 40px;
+    color:#fff;
+    font-weight:300;
+    margin-bottom:60px;
+}
+/*--ボタン--*/
+.btn{
+    font-size: 24px;
+    padding:20px 60px;
+    background-color:#d36900;
+    border-radius: 50px;
+    position:relative;
+    font-weight:300;
+}
+.btn::before{
+    content:"";
+    width:25px;
+    height:1px;
+    background-color: #fff;
+    position:absolute;
+    top:40px;
+    right:30px;
+}
+.btn::after{
+    content:"";
+    width:10px;
+    height:1px;
+    background-color: #fff;
+    position:absolute;
+    top:37px;
+    right:29px;
+    transform: rotate(35deg);
+}
+/*--セクションタイトル--*/
+.section-title{
+    font-size:40px;
+    text-align: center;
+    margin-bottom:20px;
+}
+.explain{
+    font-size:20px;
+    color:#5e5e5e;
+    text-align: center;
+    margin-bottom:60px;
+}
+/*--私たちについて--*/
+#AboutUs .content .top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#AboutUs .content .top img{
+    max-width:580px;
+    border-radius: 30px;
+}
+#AboutUs .content .top .text-area{
+    max-width:590px;
+    margin-left:70px;
+}
+#AboutUs .content .top .text-area .title{
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+#AboutUs .content .top .text-area .main-text{
+    font-size: 20px;
+    color: #5e5e5e;
+}
+
+#AboutUs .content .bottom{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top:60px;
+}
+#AboutUs .content .bottom .items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:20px 30px;
+} 
+#AboutUs .content .bottom .items .icon{
+    max-width: 60px;
+    background-color:#fff8d0;
+    border-radius: 50%;
+    padding:15px;
+}
+#AboutUs .content .bottom .items .title{
+    font-size: 24px;
+    margin-top:30px;
+    margin-bottom:15px;
+}
+#AboutUs .content .bottom .items .main-text{
+    font-size:16px;
+    max-width:380px;
+    color:#5e5e5e;
+    text-align: center;
+}
+/*--メニュー--*/
+#menu{
+    background-color: #fff8d0;
+}
+#menu .menu-list{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:30px;
+}
+#menu .menu-list li img{
+    border-radius: 30px;
+}
+#menu .menu-list li:first-child{
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+#menu .menu-list li:nth-child(2){
+    grid-column: 2/4;
+    grid-row: 1/3;
+}
+#menu .menu-list li:nth-child(3){
+    grid-column: 1/3;
+    grid-row: 3/5;
+}
+#menu .menu-list li:nth-child(4){
+    grid-column: 3/4;
+    grid-row: 3/5;
+}
+/*--ブログ--*/
+.blog .section-title{
+    margin-bottom:60px;
+}
+.blog .item{
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.blog .item .item-left{
+    margin-right:50px;
+}
+.blog .item .item-left .img{
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+.blog .item .item-left .img img{
+    border-radius: 30px;
+}
+.blog .item .item-left time{
+    font-size: 24px;
+    color:#5e5e5e;
+}
+.blog .item .item-left .title{
+    font-size:32px;
+    margin-top:20px;
+    color:#000;
+}
+.blog .item .item-right{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:100px;
+}
+.blog .item .item-right .img{
+    max-width:250px;
+    margin-right:30px;
+}
+.blog .item .item-right .img img{
+    border-radius: 20px;
+}
+.blog .item .item-right .item-top a{
+    display: flex;
+    margin-bottom:80px;
+    align-items: flex-end;
+}
+.blog .item .item-right .item-bottom a{
+    display: flex;
+    align-items: flex-end;
+}
+.blog .item .item-right time{
+    color:#5e5e5e;
+    font-size: 20px;
+}
+.blog .item .item-right .title{
+    color:#000;
+    font-size: 24px;
+}
+.blog .btn{
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/*--フッター--*/
+#footer{
+    display: flex;
+    justify-content:space-between;
+    background-color:#201f31;
+    padding:50px 150px;
+}
+#footer .left h2 a{
+    font-size: 36px;
+    margin-bottom:15px;
+}
+#footer .left .catchphrase{
+    font-size: 20px;
+    color:#a3a3a3;
+}
+
+#footer .center h2{
+    color:#fff;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+#footer .center p{
+    font-size: 20px;
+    color:#a3a3a3;
+}
+#footer .right h2{
+    font-size: 24px;
+    color: #fff;
+    margin-bottom:15px;
+}
+#footer .right .sns{
+    display: flex;
+}
+#footer .right .sns a .instagram{
+    max-width:40px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding:7px;
+    margin-right: 20px;
+}
+#footer .right .sns a .x{
+    max-width: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding:7px;
+}
+
+
+
+/*--レスポンシブ対応--*/
+@media screen and (max-width:767px){
+    .sp{
+        display:block;
+    }
+    .wrapper{
+        padding:40px 30px;
+    }
+    #header{
+        padding:10px 20px;
+    }
+    #header .logo{
+        max-width: 270px;
+    }
+    #header .navi{
+        width:80%;
+        height:100vh;
+        background-color: #fff;
+        position:fixed;
+        top:0;
+        right:-80%;
+        z-index:10;
+        transition:all 0.6s;
+    }
+    #header .navi.active{
+        right:0;
+    }
+    #header .navi .menu{
+        flex-direction: column;
+        width:100%;
+        height:100vh;
+        padding:60px 0;
+        overflow: auto;
+    }
+    #header .navi .menu li{
+        padding:20px 0;
+        margin-left:40px;
+    }
+    #header .navi .menu li a{
+        font-size: 24px;
+        color:#000;
+    }
+    /*--ハンバーガーメニュー--*/
+    #header .hbg{
+        width:40px;
+        height:40px;
+        position:fixed;
+        right:20px;
+        z-index:30;
+    }
+    #header .hbg span{
+        background-color: #000;
+        display:inline-block;
+        width:30px;
+        height:2px;
+        position:absolute;
+        left:5px;
+        transition:all 0.5s;
+    }
+    #header .hbg span:nth-of-type(1){
+        top:11px;
+    }
+    #header .hbg span:nth-of-type(2){
+        top:20px;
+    }
+    #header .hbg span:nth-of-type(3){
+        top:29px;
+    }
+    #header .hbg.active span:nth-of-type(1){
+        top:20px;
+        transform: rotate(-45deg);
+    }
+    #header .hbg.active span:nth-of-type(2){
+        opacity:0;
+    }
+    #header .hbg.active span:nth-of-type(3){
+        top:20px;
+        transform:rotate(45deg);
+    }
+
+    /*--メインビジュアル--*/
+    .mainvisual img{
+        margin-top:60px;
+        height:480px;
+        object-fit: cover;
+        object-position: bottom;
+    }
+    .mainvisual .text-area{
+        top:120px;
+    }
+    .mainvisual .text-area .name{
+        font-size:48px;
+    }
+    .mainvisual .text-area .catchphrase{
+        font-size: 20px;
+        margin-bottom:24px;
+    }
+    /*--ボタン--*/
+    .btn{
+        font-size:16px;
+        padding:10px 25px;
+    }
+    .btn::before{
+        width:15px;
+        top:20px;
+        right:8px;
+    }
+    .btn::after{
+        width:6px;
+        top:18px;
+        right:8px;
+    }
+    /*--セクションタイトル--*/
+    .section-title{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .explain{
+        font-size: 16px;
+        margin:10px auto 40px;
+        max-width:350px;
+    }
+    /*--私たちについて--*/
+    #AboutUs .content .top{
+        flex-direction: column;
+        align-items: center;
+    }
+    #AboutUs .content .top img{
+        max-width: 300px;
+        margin-bottom:40px;
+    }
+    #AboutUs .content .top .text-area{
+        margin:40px auto;
+        max-width:350px;
+        text-align: center;
+    }
+    #AboutUs .content .top .text-area .title{
+        font-size: 20px;
+    }
+    #AboutUs .content .top .text-area .main-text{
+        font-size:16px;
+    }
+    #AboutUs .content .bottom{
+        flex-direction: column;
+        margin-top:30px;
+        align-items: center;
+    }
+    #AboutUs .content .bottom .items{
+        margin-bottom:40px;
+    }
+    #AboutUs .content .bottom .items .icon{
+        max-width:50px;
+    }
+    #AboutUs .content .bottom .items .title{
+        font-size: 20px;
+    }
+    /*--メニュー--*/
+    #menu .menu-list{
+        gap:10px;
+    }
+    #menu .menu-list li img{
+        border-radius: 10px;
+    }
+    /*--ブログ--*/
+    .blog .section-title{
+        margin-bottom:40px;
+    }
+    .blog .item{
+        flex-direction: column;
+        align-items: center;
+    }
+    .blog .item .item-left{
+        margin-bottom:40px;
+        margin-right: auto;
+    }
+    .blog .item .item-left time{
+        font-size: 15px;
+    }
+    .blog .item .item-left .title{
+        font-size:20px;
+        margin-top:10px;
+    }
+    .blog .item .item-right .img{
+        max-width: 140px;
+    }
+    .blog .item .item-right .img img{
+        border-radius: 15px;
+    }
+    .blog .item .item-right time{
+        font-size: 15px;
+    }
+    .blog .item .item-right .title{
+        font-size: 16px;
+    }
+    /*--フッター--*/
+    #footer{
+        flex-direction: column;
+        padding:50px;
+    }
+    #footer .left{
+        margin-bottom:20px;
+    }
+    #footer .left .catchphrase{
+        font-size: 16px;
+    }
+    #footer .center{
+        margin-bottom: 20px;
+    }
+    #footer .center h2{
+        font-size:20px;
+    }
+    #footer .center p{
+        font-size: 16px;
+    }
+    #footer .right{
+        margin-bottom:20px;
+    }
+    #footer .right .sns a .instagram{
+        max-width: 30px;
+    }
+    #footer .right .sns a .x{
+        max-width: 30px;
+    }
+
+}
